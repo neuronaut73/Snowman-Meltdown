@@ -40,9 +40,13 @@ def play_game():
     mistakes = 0
 
     print("Welcome to Snowman Meltdown!")
-    print("Secret word selected: " + secret_word)  # for testing, later remove this line
+
 
     # TODO: Build your game loop here.
+    # For now, display the initial game state.
+    display_game_state(mistakes, secret_word, guessed_letters)
+
+
     # For now, simply prompt the user once:
     guess = input("Guess a letter: ").lower()
     print("You guessed:", guess)
