@@ -58,9 +58,12 @@ def play_game():
             print("You already guessed that letter.")
             continue
 
-    # For now, simply prompt the user once:
-    guess = input("Guess a letter: ").lower()
-    print("You guessed:", guess)
+        guessed_letters.append(guess)
+
+        if guess not in secret_word:
+            mistakes += 1
+            print(f"Wrong guess! You have {3 - mistakes} attempts left.")
+
 
 if __name__ == "__main__":
     play_game()
