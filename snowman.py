@@ -41,10 +41,15 @@ def play_game():
 
     print("Welcome to Snowman Meltdown!")
 
+    while mistakes < 3 and set(secret_word) != set(guessed_letters):
+        # Display the current game state.
+        display_game_state(mistakes, secret_word, guessed_letters)
 
-    # TODO: Build your game loop here.
-    # For now, display the initial game state.
-    display_game_state(mistakes, secret_word, guessed_letters)
+        # Prompt the user for a guess.
+        guess = input("Guess a letter: ").lower()
+        print("You guessed:", guess)
+
+    # display_game_state(mistakes, secret_word, guessed_letters)
 
 
     # For now, simply prompt the user once:
