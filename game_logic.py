@@ -50,7 +50,9 @@ def play_game():
         guess = input("Guess a letter: ").lower()
         print("You guessed:", guess)
 
-    # display_game_state(mistakes, secret_word, guessed_letters)
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single letter.")
+            continue
 
 
     # For now, simply prompt the user once:
