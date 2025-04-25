@@ -61,7 +61,7 @@ def play_game():
         print(set(secret_word))
         print(set(guessed_letters))
 
-        if set(guessed_letters) == set(secret_word):
+        if set(secret_word).issubset(set(guessed_letters)):
             display_game_state(mistakes, secret_word, guessed_letters)
             print("Congratulations! You saved the snowman! The word was:", secret_word)
             break
