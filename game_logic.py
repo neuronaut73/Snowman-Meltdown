@@ -58,12 +58,15 @@ def play_game():
             print(f"Wrong guess! You have {3 - mistakes} attempts left.")
 
             if 3 - mistakes == 0:
+                display_game_state(mistakes, secret_word, guessed_letters)
                 print("Game Over! You did not save the snowman :( The word was:", secret_word)
+                print()
                 break
 
         if set(secret_word).issubset(set(guessed_letters)):
             display_game_state(mistakes, secret_word, guessed_letters)
             print(Back.YELLOW + "Congratulations! You saved the snowman!" + Style.RESET_ALL + " " + Fore.GREEN + "The word was:", secret_word)
+            print()
             break
 
 
