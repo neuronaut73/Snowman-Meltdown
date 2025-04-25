@@ -3,6 +3,20 @@ import random
 # List of secret words
 WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
+# Snowman ASCII Art stages
+STAGES = [
+     # Stage 0: Full snowman
+     """
+      ___
+     /___\\
+     (o o)
+     ( : )
+     ( : )
+     """,
+ ]
+
+
+
 def get_random_word():
     """Selects a random word from the list."""
     return WORDS[random.randint(0, len(WORDS) - 1)]
