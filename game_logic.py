@@ -58,5 +58,15 @@ def play_game():
                 print("Game Over! You did not save the snowman :( The word was:", secret_word)
                 break
 
+        print(set(secret_word))
+        print(set(guessed_letters))
+
+        if set(secret_word) == set(guessed_letters):
+            display_game_state(mistakes, secret_word, guessed_letters)
+            print("Congratulations! You saved the snowman! The word was:", secret_word)
+            break
+
+
+
 
 
