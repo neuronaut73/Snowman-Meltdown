@@ -54,6 +54,9 @@ def play_game():
             print("Please enter a single letter.")
             continue
 
+        if guess in guessed_letters:
+            print("You already guessed that letter.")
+            continue
 
     # For now, simply prompt the user once:
     guess = input("Guess a letter: ").lower()
