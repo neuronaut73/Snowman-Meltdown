@@ -4,7 +4,6 @@ from colorama import init, Back, Fore, Style
 init(autoreset=True)
 
 
-
 # List of secret words
 WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
@@ -15,7 +14,7 @@ def get_random_word():
 
 
 def display_game_state(mistakes, secret_word, guessed_letters):
-    # Display the snowman stage for the current number of mistakes.
+    """Display the snowman stage for the current number of mistakes."""
     print(STAGES[mistakes])
     # Build a display version of the secret word.
     display_word = ""
@@ -29,6 +28,7 @@ def display_game_state(mistakes, secret_word, guessed_letters):
 
 
 def play_game():
+    """Main game loop."""
     secret_word = get_random_word()
     guessed_letters = []
     mistakes = 0
