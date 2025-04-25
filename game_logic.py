@@ -32,7 +32,7 @@ def play_game():
 
     print("Welcome to Snowman Meltdown!")
 
-    while mistakes < 3 and set(guessed_letters) not in set(secret_word):
+    while mistakes < 3:
         # Display the current game state.
         display_game_state(mistakes, secret_word, guessed_letters)
 
@@ -61,7 +61,7 @@ def play_game():
         print(set(secret_word))
         print(set(guessed_letters))
 
-        if  set(guessed_letters) in set(secret_word):
+        if set(guessed_letters) == set(secret_word):
             display_game_state(mistakes, secret_word, guessed_letters)
             print("Congratulations! You saved the snowman! The word was:", secret_word)
             break
