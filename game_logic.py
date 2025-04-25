@@ -1,5 +1,8 @@
 import random
 from ascii_art import STAGES
+from colorama import init, Back
+init(autoreset=True)
+
 
 
 # List of secret words
@@ -63,7 +66,7 @@ def play_game():
 
         if set(secret_word).issubset(set(guessed_letters)):
             display_game_state(mistakes, secret_word, guessed_letters)
-            print("Congratulations! You saved the snowman! The word was:", secret_word)
+            print(Back.YELLOW + "Congratulations! You saved the snowman! The word was:", secret_word)
             break
 
 
