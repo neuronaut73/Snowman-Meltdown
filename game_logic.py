@@ -1,22 +1,8 @@
 import random
 from ascii_art import STAGES
 
-# List of secret words
-WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
-# Snowman ASCII Art stages
-STAGES = [
-     # Stage 0: Full snowman
-     """
-      ___
-     /___\\
-     (o o)
-     ( : )
-     ( : )
-     """,
- ]
-
-def get_random_word():
+def get_random_word(WORDS):
     """Selects a random word from the list."""
     return WORDS[random.randint(0, len(WORDS) - 1)]
 
@@ -64,6 +50,3 @@ def play_game():
             mistakes += 1
             print(f"Wrong guess! You have {3 - mistakes} attempts left.")
 
-
-if __name__ == "__main__":
-    play_game()
