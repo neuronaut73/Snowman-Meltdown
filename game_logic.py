@@ -6,7 +6,7 @@ from ascii_art import STAGES
 WORDS = ["python", "git", "github", "snowman", "meltdown"]
 
 
-def get_random_word(WORDS):
+def get_random_word():
     """Selects a random word from the list."""
     return WORDS[random.randint(0, len(WORDS) - 1)]
 
@@ -53,4 +53,10 @@ def play_game():
         if guess not in secret_word:
             mistakes += 1
             print(f"Wrong guess! You have {3 - mistakes} attempts left.")
+
+            if 3 - mistakes == 0:
+                print("Game Over! You did not save the snowman :( The word was:", secret_word)
+                break
+
+
 
